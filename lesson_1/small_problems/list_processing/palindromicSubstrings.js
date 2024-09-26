@@ -15,6 +15,14 @@ function allSubstrings(str) {
   }
   return result;
 } 
-  
-console.log(allSubstrings('abcde'));
-  
+
+function palindromes(str) {
+    return allSubstrings(str).filter(isPalendrome);
+}
+
+function isPalendrome(word) {
+    return word.length > 1 && word === word.split('').reverse().join('');
+}
+
+console.log(palindromes('hello-madam-did-madam-goodbye'));
+//console.log(substrings('madam'));
