@@ -13,4 +13,4 @@ function transactionsFor(id, list) {
     return Object.values(list).filter((obj) => obj.id === id);
 }
 
-console.log(transactions(101, transactions));
+console.log(transactionsFor(101, transactions));
