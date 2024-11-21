@@ -1,14 +1,9 @@
 function is_prime(num) {
-    for (let count = 2; count < num; count++) {
-        console.log(num + ' = ' + count);
-        
-        if (num % count === 0 || num === 1) {
-            return false;
-        }            
-
+    if (num === 1) { return false; };
+    for (let count = 2; count < num; count++) {      
+        if (num % count === 0) { return false; };            
     }
-    return true;
-    
+    return true;    
 }
 
 console.log(is_prime(1) === false)            // true
@@ -23,7 +18,7 @@ console.log(is_prime(9) === false)            // true
 console.log(is_prime(10) === false)           // true
 console.log(is_prime(23) === true)            // true
 console.log(is_prime(24) === false)           // true
-//console.log(is_prime(997) === true)           // true
-//console.log(is_prime(998) === false)          // true
-//console.log(is_prime(3_297_061) === true)     // true
-//console.log(is_prime(23_297_061) === false)   // true
+console.log(is_prime(997) === true)           // true
+console.log(is_prime(998) === false)          // true
+console.log(is_prime(3_297_061) === true)     // true
+console.log(is_prime(23_297_061) === false)   // true
