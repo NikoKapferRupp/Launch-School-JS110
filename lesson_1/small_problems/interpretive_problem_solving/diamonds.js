@@ -1,14 +1,29 @@
 function diamonds(oddInt) {
-  let padding = (num) => Math.floor(num / 2);
+  // get odd int
+  // create diamond wide and long like int
+  // loop
 
-  for (let count = 1; count < oddInt; count += 1) {
-    let str = '*';
-    str = str.repeat(count);
-    //str.padStart(padding(oddInt - count));
-    //str.padEnd(padding(oddInt - count));
-    console.log(str);
+  let halfOddInt = Math.floor(oddInt / 2);
+
+  for (let index = 0; index < halfOddInt; index++) {
+    let str = "*".repeat(index + 1) + "*".repeat(index);
+    let padding = " ".repeat(halfOddInt - index);
+    console.log(padding + str + padding);
     
   }
+
+  console.log("*".repeat(oddInt));
+
+  for (let index = halfOddInt; 0 < index; index--) {    
+    let str = "*".repeat(index)+ "*".repeat(index - 1);
+    let padding = " ".repeat(halfOddInt - index + 1);
+    console.log(padding + str + padding);
+    
+  }
+  // log
+  console.log();
+  
+  // loop
 }
 
 diamonds(1);
